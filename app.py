@@ -42,8 +42,8 @@ if reader_id:
     document = next(d for d in data if d['id'] == doc_idx)
     st.subheader(document['specialty'])
     # Highlighting function
+    colors = ["#FFDDC1", "#C1E1FF", "#C1FFC1", "#FFC1E1"]
     def highlight_text(doc, codes):
-        colors = ["#FFDDC1", "#C1E1FF", "#C1FFC1", "#FFC1E1"]
         for i, code_dict in enumerate(codes):
             for code, span in code_dict.items():
                 doc = doc.replace(span, f'<span style="background-color:{colors[i % len(colors)]};">{span}</span>')
@@ -58,6 +58,7 @@ if reader_id:
             current_idx = doc_indices.index(st.session_state["doc_select"])
             if current_idx < len(doc_indices) - 1:
                 st.session_state["doc_select"] = doc_indices[current_idx + 1]
+                pages.current = 0
             else:
                 st.success("No more documents left!")
                 st.stop()
@@ -71,7 +72,8 @@ if reader_id:
         code = list(item.keys())[0]
         span = list(item.values())[0]
         st.markdown(f'**Code: {code}**')
-        st.markdown(f'**Extracted Span:** {span}')
+        span_with_highlight = f'<span style="background-color:{colors[pages.current % len(colors)]};">{span}</span>'
+        st.markdown(f"**Extracted Span:** {span_with_highlight}", unsafe_allow_html=True)
         response = st.radio("Is this code correct?", ["Yes", "No", "Should not be coded"], key=f"{doc_idx}_{code}_response_{pages.current}")
         notes = st.text_area("Notes (Feedback, Explanation, or Missing Codes)", key=f"{doc_idx}_{code}_notes_{pages.current}")
         results.append({"code": code, "response": response, "notes": notes})
