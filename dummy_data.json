@@ -1,0 +1,21 @@
+[
+    {
+        "id" : 0,
+        "specialty": "Orthodontics",
+        "document": "Lorem ipsum odor amet, consectetuer adipiscing elit. Metus maximus faucibus finibus at morbi faucibus tempus ex! Eros placerat facilisis porta eros orci vel platea fusce. Hendrerit phasellus rutrum maecenas orci ullamcorper cras ad hendrerit egestas. Volutpat mollis nec, faucibus duis efficitur tortor finibus tempor. Convallis vulputate eros curabitur a; pharetra vulputate. Nam ut pharetra tortor commodo sed fusce dictum. Ornare lacus elementum natoque scelerisque, turpis molestie nisl congue aliquam. Aliquet ullamcorper massa primis volutpat; leo turpis class lobortis. Nam ullamcorper urna hac magnis penatibus mus consequat ante.",
+        "codes": [
+            {"A123": "ipsum odor amet, consectetuer"},
+            {"B234": "faucibus duis efficitur tortor finibus tempor"}
+        ]
+    },
+    {
+        "id" : 1,
+        "specialty": "Ophthalmology",
+        "document": "Vestibulum felis habitant rutrum finibus; curae senectus placerat lacinia. Vestibulum quam conubia, faucibus hendrerit ipsum dignissim tellus mi iaculis. Posuere suscipit vivamus class varius, at ligula cras massa varius. Iaculis inceptos sapien vivamus magna himenaeos. Eget dignissim fermentum integer habitasse eu commodo fames fermentum. Odio leo placerat scelerisque, morbi mus tempus bibendum. Vivamus nostra odio condimentum scelerisque praesent habitant.",
+        "codes": [
+            {"C456": "Vestibulum quam conubia"},
+            {"D678": "tellus mi iaculis"},
+            {"E982": "um. Vivamus nostra odio condimentum sceler"}
+        ]
+    }
+]
